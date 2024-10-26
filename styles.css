@@ -3,19 +3,24 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     text-align:center;
+    font-family: Poppins;
     background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 }
 table {
     width: 70%;
     border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    margin: auto;
+    font-family: Poppins;
+    margin: 2rem auto;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
     padding: 12px 15px;
     text-align: left;
-    border: 1px solid #dddddd;
+    border: none;
 }
 
 th {
@@ -26,6 +31,10 @@ th {
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
 }
 
 tr:hover {
