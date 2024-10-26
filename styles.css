@@ -3,38 +3,75 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     text-align:center;
+    font-family: Poppins;
 }
+
+:root {
+    --bg-color: #181823;
+    --theme-color: #68e397;
+    --theme-color2: #90ffe7;
+    --theme-light: #c7f2c0;
+    --theme-dark: #1dae6d;
+    --theme-darker: #07351f;
+    --text-color: #e0ffdf;
+}
+
+.mesh-gradient {
+    background:
+        radial-gradient(circle at 10% 10%, var(--theme-color2), var(--theme-color) 50%),
+        radial-gradient(circle at 80% 80%, var(--text-color), var(--theme-light) 50%),
+        radial-gradient(circle at 50% 30%, var(--theme-color2), var(--theme-color) 50%),
+        radial-gradient(circle at 70% 60%, var(--text-color), var(--theme-light) 60%);
+    background-size: 300% 300%;
+    background-repeat: no-repeat;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 table {
     width: 70%;
     border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    margin: auto;
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border: 1px solid #dddddd;
-}
-
-th {
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:hover {
-    background-color: #ddd;
-}
-
-table {
+    font-family: Poppins;
+    margin: 2rem auto;
+    border: none;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: none;
+}
 
+th {
+    background-color: var(--theme-dark);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: var(--theme-light);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--text-color);
+}
+
+tr:hover {
+    background-color: var(--theme-color);
+}
