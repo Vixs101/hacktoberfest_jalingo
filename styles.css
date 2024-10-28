@@ -10,6 +10,7 @@ table {
     border-collapse: collapse;
     font-family: Arial, sans-serif;
     margin: auto;
+    margin-bottom: 40px;
 }
 
 th, td {
@@ -28,8 +29,12 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
+tr:nth-child(odd) {
+    background-color: rgb(150, 236, 150);
+}
+
 tr:hover {
-    background-color: #ddd;
+    background-color: #c1bfbf;
 }
 
 table {
